@@ -67,6 +67,14 @@
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
+    --text-6xl: 3.75rem;
+    --text-6xl--line-height: 1;
+    --text-8xl: 6rem;
+    --text-8xl--line-height: 1;
+    --text-9xl: 8rem;
+    --text-9xl--line-height: 1;
     --font-weight-bold: 700;
     --blur-sm: 8px;
     --blur-md: 12px;
@@ -355,6 +363,9 @@
   }
   .h-96 {
     height: calc(var(--spacing) * 96);
+  }
+  .h-full {
+    height: 100%;
   }
   .h-screen {
     height: 100vh;
@@ -750,9 +761,6 @@
   .text-green-950 {
     color: var(--color-green-950);
   }
-  .text-red-500 {
-    color: var(--color-red-500);
-  }
   .text-red-600 {
     color: var(--color-red-600);
   }
@@ -967,9 +975,59 @@
       background-color: var(--color-green-800);
     }
   }
-  .active\:bg-red-800 {
-    &:active {
-      background-color: var(--color-red-800);
+  .sm\:text-9xl {
+    @media (width >= 40rem) {
+      font-size: var(--text-9xl);
+      line-height: var(--tw-leading, var(--text-9xl--line-height));
+    }
+  }
+  .md\:bg-blue-700 {
+    @media (width >= 48rem) {
+      background-color: var(--color-blue-700);
+    }
+  }
+  .md\:text-2xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
+  .lg\:bg-amber-600 {
+    @media (width >= 64rem) {
+      background-color: var(--color-amber-600);
+    }
+  }
+  .lg\:bg-pink-900 {
+    @media (width >= 64rem) {
+      background-color: var(--color-pink-900);
+    }
+  }
+  .lg\:text-4xl {
+    @media (width >= 64rem) {
+      font-size: var(--text-4xl);
+      line-height: var(--tw-leading, var(--text-4xl--line-height));
+    }
+  }
+  .xl\:bg-amber-500 {
+    @media (width >= 80rem) {
+      background-color: var(--color-amber-500);
+    }
+  }
+  .xl\:text-6xl {
+    @media (width >= 80rem) {
+      font-size: var(--text-6xl);
+      line-height: var(--tw-leading, var(--text-6xl--line-height));
+    }
+  }
+  .\32 xl\:bg-green-700 {
+    @media (width >= 96rem) {
+      background-color: var(--color-green-700);
+    }
+  }
+  .\32 xl\:text-8xl {
+    @media (width >= 96rem) {
+      font-size: var(--text-8xl);
+      line-height: var(--tw-leading, var(--text-8xl--line-height));
     }
   }
 }
